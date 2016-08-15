@@ -5,8 +5,14 @@ var now = moment();
 // console.log(now.format('X'));
 // console.log(now.format('x'));
 
-var timestamp = 1471268252286;
+var timestamp = now.valueOf();
 var timestampMoment = moment.utc(timestamp);
+console.log ('timestamp: ' + timestamp);
+console.log ('timestamp type: ' + typeof(timestamp));
+
+console.log ('timestampUTC: ' + timestampMoment);
+console.log ('timestampUTC type: ' + typeof(timestampMoment));
+
 console.log(timestampMoment.local().format('h:mma'));
 
 
