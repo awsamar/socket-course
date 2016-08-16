@@ -18,7 +18,6 @@ io.on('connection', function(socket) {
 		io.emit('message', message);
 	});
 
-
 	socket.emit('message', {
 		name: 'System',
 		timestamp: moment().valueOf(), //now in primitive value
@@ -32,4 +31,3 @@ app.use(express.static(__dirname + '/public'));
 http.listen(PORT, function() {
 	console.log('Server started.');
 });
-

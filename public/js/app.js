@@ -16,7 +16,6 @@ socket.on('message', function(message) {
 	$message.append('<p>' + message.text + '</p>');
 });
 
-
 //handles submitting of new message
 var $form = jQuery('#message-form');
 $form.on('submit', function(event) {
