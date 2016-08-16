@@ -3,7 +3,6 @@ var name = getQueryVariable('name') || 'Anonymous';
 var room = getQueryVariable('room');
 
 
-
 socket.on('connect', function() {
 	console.log(name + ' joined room ' + room + '.');
 });
