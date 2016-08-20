@@ -15,11 +15,14 @@ socket.on('connect', function() {
 });
 
 socket.on('message', function(message) {
-	$message = jQuery('.messages');
+	$messages = jQuery('.messages');
+
+	$message = jQuery('<li class="list-group-item"></li>')
 	var timestampUTC = moment.utc(message.timestamp);
 
 	$message.append('<p><strong>' + message.name + ' ' + timestampUTC.local().format('h:mm a') + ': </strong></p> ')
 	$message.append('<p>' + message.text + '</p>');
+	$messages.append($message);
 });
 
 //handles submitting of new message
