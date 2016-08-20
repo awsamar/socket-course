@@ -23,13 +23,12 @@ function sendCurrentUsers(socket) {
 		if (tempUser.room === userData.room) {
 			users.push(tempUser.name);
 		}
+	});
 
-		socket.emit('message', {
-			name: 'System',
-			text: 'Current Users: ' + users.join(', '),
-			timestamp: moment.valueOf()
-		});
-
+	socket.emit('message', {
+		name: 'System',
+		text: 'Current Users: ' + users.join(', '),
+		timestamp: moment.valueOf()
 	});
 
 };
